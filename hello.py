@@ -1,5 +1,18 @@
-from flask import Flask,redirect,url_for
+from flask import Flask,redirect,url_for,request,render_template
 app = Flask(__name__)
+
+if __name__=='__main__':
+    app.run(host='0.0.0.0',deubg=True)
+
+@app.route('/hello/')
+@app.route('/hello/<name>')
+def hello(name=None):
+    return render_template('conditional.html',name=name)
+
+@app.route('/users/')
+def users():
+    names=['kaci','han','phoebe','elle','aoife']
+    return render_template('loop.html',names=names)
 
 @app.route('/private')
 def private():
@@ -12,7 +25,14 @@ def login():
 
 @app.route('/')
 def root():
-    return "Home"
+    return "<h1>The default, 'root' route</h2>"
+
+@app.route("/account",methods=['GET','POST'])
+def account():
+    if request.method=='POST':
+        return "POST'ed to /account root\n"
+    else:
+        return 'GET /account root'
 
 @app.route("/static-example/img")
 def static_example_img():

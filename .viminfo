@@ -15,9 +15,11 @@
 
 # Command Line History (newest to oldest):
 :x
-|2,0,1570061759,,"x"
+|2,0,1570715146,,"x"
 :X
-|2,0,1570059597,,"X"
+|2,0,1570714586,,"X"
+:q
+|2,0,1570099471,,"q"
 :w hello.py
 |2,0,1569450250,,"w hello.py"
 :wq
@@ -30,8 +32,6 @@
 |2,0,1569368861,,"w"
 :q!
 |2,0,1569368825,,"q!"
-:q
-|2,0,1569368802,,"q"
 
 # Search String History (newest to oldest):
 ? \<return\>
@@ -47,359 +47,435 @@
 
 # Registers:
 ""1	LINE	0
-	    return "aaaa"
-|3,1,1,1,1,0,1570060389,"    return \"aaaa\""
+	@app.route('/hello/<name>')
+|3,1,1,1,1,0,1570714273,"@app.route('/hello/<name>')"
 "2	LINE	0
-	    #returddln start+url+end
-|3,0,2,1,1,0,1570060382,"    #returddln start+url+end"
+	
+|3,0,2,1,1,0,1570714246,""
 "3	LINE	0
-	
-	
-|3,0,3,1,2,0,1570041126,"",""
+	@app.route('/hello/')
+|3,0,3,1,1,0,1570714245,"@app.route('/hello/')"
 "4	LINE	0
-	@app.route("/force400/")
-	
-|3,0,4,1,2,0,1570041125,"@app.route(\"/force400/\")",""
+	@app.route('/hello/<name>')
+|3,0,4,1,1,0,1570714244,"@app.route('/hello/<name>')"
 "5	LINE	0
-	def force400():
-	    abort(400)
-|3,0,5,1,2,0,1570041125,"def force400():","    abort(400)"
+	def hello(name=None):
+|3,0,5,1,1,0,1570714243,"def hello(name=None):"
 "6	LINE	0
-	@app.errorhandler(400)
-	
-|3,0,6,1,2,0,1570041123,"@app.errorhandler(400)",""
+	    return render_template('conditional.html',name=name)
+|3,0,6,1,1,0,1570714243,"    return render_template('conditional.html',name=name)"
 "7	LINE	0
-	def page_not_found(error):
-	    return "Error 400.",400
-|3,0,7,1,2,0,1570041123,"def page_not_found(error):","    return \"Error 400.\",400"
+	    return "aaaa"
+|3,0,7,1,1,0,1570060389,"    return \"aaaa\""
 "8	LINE	0
-	if __name__=="__main__":
-|3,0,8,1,1,0,1570041103,"if __name__==\"__main__\":"
+	    #returddln start+url+end
+|3,0,8,1,1,0,1570060382,"    #returddln start+url+end"
 "9	LINE	0
-	    app.runhost='0.0.0.0',debug=True)
-|3,0,9,1,1,0,1570041101,"    app.runhost='0.0.0.0',debug=True)"
+	
+	
+|3,0,9,1,2,0,1570041126,"",""
 "-	CHAR	0
 	    return start+url+end, 200
 |3,0,36,0,1,0,1570059930,"    return start+url+end, 200"
 
 # File marks:
-'0  19  9  ~/hello.py
-|4,48,19,9,1570061759,"~/hello.py"
-'1  1  0  ~/hello.py
-|4,49,1,0,1570061517,"~/hello.py"
-'2  1  0  ~/hello.py
-|4,50,1,0,1570061517,"~/hello.py"
-'3  1  0  ~/hello.py
-|4,51,1,0,1570061155,"~/hello.py"
-'4  1  0  ~/hello.py
-|4,52,1,0,1570061155,"~/hello.py"
-'5  1  0  ~/hello.py
-|4,53,1,0,1570061012,"~/hello.py"
-'6  1  0  ~/hello.py
-|4,54,1,0,1570061012,"~/hello.py"
-'7  1  0  ~/hello.py
-|4,55,1,0,1570061012,"~/hello.py"
-'8  1  0  ~/hello.py
-|4,56,1,0,1570061012,"~/hello.py"
-'9  1  0  ~/hello.py
-|4,57,1,0,1570060836,"~/hello.py"
+'0  1  8  ~/templates/extend2.html
+|4,48,1,8,1570715146,"~/templates/extend2.html"
+'1  12  12  ~/templates.py
+|4,49,12,12,1570715117,"~/templates.py"
+'2  12  12  ~/templates.py
+|4,50,12,12,1570715061,"~/templates.py"
+'3  14  33  ~/templates.py
+|4,51,14,33,1570715001,"~/templates.py"
+'4  14  33  ~/templates.py
+|4,52,14,33,1570715001,"~/templates.py"
+'5  14  33  ~/templates.py
+|4,53,14,33,1570715001,"~/templates.py"
+'6  14  33  ~/templates.py
+|4,54,14,33,1570715001,"~/templates.py"
+'7  4  12  ~/templates/extend2.html
+|4,55,4,12,1570714784,"~/templates/extend2.html"
+'8  4  12  ~/templates/extend2.html
+|4,56,4,12,1570714784,"~/templates/extend2.html"
+'9  4  12  ~/templates/extend.html
+|4,57,4,12,1570714713,"~/templates/extend.html"
 
 # Jumplist (newest first):
--'  19  9  ~/hello.py
-|4,39,19,9,1570061759,"~/hello.py"
--'  21  9  ~/hello.py
-|4,39,21,9,1570061522,"~/hello.py"
--'  1  0  ~/hello.py
-|4,39,1,0,1570061517,"~/hello.py"
--'  1  0  ~/hello.py
-|4,39,1,0,1570061517,"~/hello.py"
--'  1  0  ~/hello.py
-|4,39,1,0,1570061155,"~/hello.py"
--'  1  0  ~/hello.py
-|4,39,1,0,1570061012,"~/hello.py"
--'  1  0  ~/hello.py
-|4,39,1,0,1570060836,"~/hello.py"
--'  21  9  ~/hello.py
-|4,39,21,9,1570060777,"~/hello.py"
--'  21  9  ~/hello.py
-|4,39,21,9,1570060777,"~/hello.py"
--'  21  9  ~/hello.py
-|4,39,21,9,1570060777,"~/hello.py"
--'  21  9  ~/hello.py
-|4,39,21,9,1570060777,"~/hello.py"
--'  21  9  ~/hello.py
-|4,39,21,9,1570060777,"~/hello.py"
--'  19  8  ~/hello.py
-|4,39,19,8,1570060756,"~/hello.py"
--'  19  8  ~/hello.py
-|4,39,19,8,1570060756,"~/hello.py"
--'  19  8  ~/hello.py
-|4,39,19,8,1570060756,"~/hello.py"
--'  19  8  ~/hello.py
-|4,39,19,8,1570060756,"~/hello.py"
--'  19  8  ~/hello.py
-|4,39,19,8,1570060756,"~/hello.py"
--'  19  8  ~/hello.py
-|4,39,19,8,1570060583,"~/hello.py"
--'  17  12  ~/hello.py
-|4,39,17,12,1570060571,"~/hello.py"
--'  17  12  ~/hello.py
-|4,39,17,12,1570060571,"~/hello.py"
--'  17  12  ~/hello.py
-|4,39,17,12,1570060571,"~/hello.py"
--'  17  12  ~/hello.py
-|4,39,17,12,1570060571,"~/hello.py"
--'  17  12  ~/hello.py
-|4,39,17,12,1570060571,"~/hello.py"
--'  17  12  ~/hello.py
-|4,39,17,12,1570060571,"~/hello.py"
--'  17  12  ~/hello.py
-|4,39,17,12,1570060571,"~/hello.py"
--'  17  12  ~/hello.py
-|4,39,17,12,1570060536,"~/hello.py"
--'  23  0  ~/hello.py
-|4,39,23,0,1570060521,"~/hello.py"
--'  23  0  ~/hello.py
-|4,39,23,0,1570060521,"~/hello.py"
--'  23  0  ~/hello.py
-|4,39,23,0,1570060521,"~/hello.py"
--'  23  0  ~/hello.py
-|4,39,23,0,1570060521,"~/hello.py"
--'  23  0  ~/hello.py
-|4,39,23,0,1570060521,"~/hello.py"
--'  23  0  ~/hello.py
-|4,39,23,0,1570060521,"~/hello.py"
--'  23  0  ~/hello.py
-|4,39,23,0,1570060521,"~/hello.py"
--'  23  0  ~/hello.py
-|4,39,23,0,1570060521,"~/hello.py"
--'  23  0  ~/hello.py
-|4,39,23,0,1570060400,"~/hello.py"
--'  41  4  ~/hello.py
-|4,39,41,4,1570059894,"~/hello.py"
--'  41  4  ~/hello.py
-|4,39,41,4,1570059894,"~/hello.py"
--'  41  4  ~/hello.py
-|4,39,41,4,1570059894,"~/hello.py"
--'  41  4  ~/hello.py
-|4,39,41,4,1570059894,"~/hello.py"
--'  41  4  ~/hello.py
-|4,39,41,4,1570059894,"~/hello.py"
--'  41  4  ~/hello.py
-|4,39,41,4,1570059894,"~/hello.py"
--'  41  4  ~/hello.py
-|4,39,41,4,1570059894,"~/hello.py"
--'  41  4  ~/hello.py
-|4,39,41,4,1570059894,"~/hello.py"
--'  41  4  ~/hello.py
-|4,39,41,4,1570059894,"~/hello.py"
--'  26  4  ~/hello.py
-|4,39,26,4,1570059722,"~/hello.py"
--'  26  4  ~/hello.py
-|4,39,26,4,1570059722,"~/hello.py"
--'  26  4  ~/hello.py
-|4,39,26,4,1570059722,"~/hello.py"
--'  26  4  ~/hello.py
-|4,39,26,4,1570059722,"~/hello.py"
--'  26  4  ~/hello.py
-|4,39,26,4,1570059722,"~/hello.py"
--'  26  4  ~/hello.py
-|4,39,26,4,1570059722,"~/hello.py"
--'  26  4  ~/hello.py
-|4,39,26,4,1570059722,"~/hello.py"
--'  26  4  ~/hello.py
-|4,39,26,4,1570059722,"~/hello.py"
--'  26  4  ~/hello.py
-|4,39,26,4,1570059722,"~/hello.py"
--'  29  4  ~/hello.py
-|4,39,29,4,1570059702,"~/hello.py"
--'  29  4  ~/hello.py
-|4,39,29,4,1570059702,"~/hello.py"
--'  29  4  ~/hello.py
-|4,39,29,4,1570059702,"~/hello.py"
--'  29  4  ~/hello.py
-|4,39,29,4,1570059702,"~/hello.py"
--'  29  4  ~/hello.py
-|4,39,29,4,1570059702,"~/hello.py"
--'  29  4  ~/hello.py
-|4,39,29,4,1570059702,"~/hello.py"
--'  29  4  ~/hello.py
-|4,39,29,4,1570059702,"~/hello.py"
--'  29  4  ~/hello.py
-|4,39,29,4,1570059702,"~/hello.py"
--'  29  4  ~/hello.py
-|4,39,29,4,1570059702,"~/hello.py"
--'  17  11  ~/hello.py
-|4,39,17,11,1570059673,"~/hello.py"
--'  17  11  ~/hello.py
-|4,39,17,11,1570059673,"~/hello.py"
--'  17  11  ~/hello.py
-|4,39,17,11,1570059652,"~/hello.py"
--'  25  0  ~/hello.py
-|4,39,25,0,1570059636,"~/hello.py"
--'  25  0  ~/hello.py
-|4,39,25,0,1570059636,"~/hello.py"
--'  25  0  ~/hello.py
-|4,39,25,0,1570059636,"~/hello.py"
--'  25  0  ~/hello.py
-|4,39,25,0,1570059636,"~/hello.py"
--'  25  0  ~/hello.py
-|4,39,25,0,1570059636,"~/hello.py"
--'  25  0  ~/hello.py
-|4,39,25,0,1570059636,"~/hello.py"
--'  25  0  ~/hello.py
-|4,39,25,0,1570059636,"~/hello.py"
--'  25  0  ~/hello.py
-|4,39,25,0,1570059636,"~/hello.py"
--'  25  0  ~/hello.py
-|4,39,25,0,1570059636,"~/hello.py"
--'  25  0  ~/hello.py
-|4,39,25,0,1570059636,"~/hello.py"
--'  25  0  ~/hello.py
-|4,39,25,0,1570059601,"~/hello.py"
--'  22  3  ~/hello.py
-|4,39,22,3,1570059578,"~/hello.py"
--'  22  3  ~/hello.py
-|4,39,22,3,1570059578,"~/hello.py"
--'  22  3  ~/hello.py
-|4,39,22,3,1570059578,"~/hello.py"
--'  22  3  ~/hello.py
-|4,39,22,3,1570059578,"~/hello.py"
--'  22  3  ~/hello.py
-|4,39,22,3,1570059578,"~/hello.py"
--'  22  3  ~/hello.py
-|4,39,22,3,1570059578,"~/hello.py"
--'  22  3  ~/hello.py
-|4,39,22,3,1570059578,"~/hello.py"
--'  22  3  ~/hello.py
-|4,39,22,3,1570059578,"~/hello.py"
--'  22  3  ~/hello.py
-|4,39,22,3,1570059578,"~/hello.py"
--'  23  3  ~/hello.py
-|4,39,23,3,1570059578,"~/hello.py"
--'  23  3  ~/hello.py
-|4,39,23,3,1570059578,"~/hello.py"
--'  23  3  ~/hello.py
-|4,39,23,3,1570059578,"~/hello.py"
--'  23  25  ~/hello.py
-|4,39,23,25,1570059538,"~/hello.py"
--'  17  12  ~/hello.py
-|4,39,17,12,1570055679,"~/hello.py"
--'  17  12  ~/hello.py
-|4,39,17,12,1570055679,"~/hello.py"
--'  17  12  ~/hello.py
-|4,39,17,12,1570055650,"~/hello.py"
--'  17  11  ~/hello.py
-|4,39,17,11,1570055617,"~/hello.py"
--'  23  4  ~/hello.py
-|4,39,23,4,1570055597,"~/hello.py"
--'  23  4  ~/hello.py
-|4,39,23,4,1570055597,"~/hello.py"
--'  23  4  ~/hello.py
-|4,39,23,4,1570055573,"~/hello.py"
--'  17  11  ~/hello.py
-|4,39,17,11,1570055489,"~/hello.py"
--'  17  11  ~/hello.py
-|4,39,17,11,1570055182,"~/hello.py"
--'  20  16  ~/hello.py
-|4,39,20,16,1570055146,"~/hello.py"
--'  20  16  ~/hello.py
-|4,39,20,16,1570055146,"~/hello.py"
+-'  1  8  ~/templates/extend2.html
+|4,39,1,8,1570715146,"~/templates/extend2.html"
+-'  4  12  ~/templates/extend2.html
+|4,39,4,12,1570715132,"~/templates/extend2.html"
+-'  12  12  ~/templates.py
+|4,39,12,12,1570715117,"~/templates.py"
+-'  12  12  ~/templates.py
+|4,39,12,12,1570715117,"~/templates.py"
+-'  12  12  ~/templates.py
+|4,39,12,12,1570715061,"~/templates.py"
+-'  12  12  ~/templates.py
+|4,39,12,12,1570715061,"~/templates.py"
+-'  14  33  ~/templates.py
+|4,39,14,33,1570715052,"~/templates.py"
+-'  14  33  ~/templates.py
+|4,39,14,33,1570715052,"~/templates.py"
+-'  14  33  ~/templates.py
+|4,39,14,33,1570715052,"~/templates.py"
+-'  14  33  ~/templates.py
+|4,39,14,33,1570715052,"~/templates.py"
+-'  14  33  ~/templates.py
+|4,39,14,33,1570715001,"~/templates.py"
+-'  14  33  ~/templates.py
+|4,39,14,33,1570715001,"~/templates.py"
+-'  1  0  ~/templates.py
+|4,39,1,0,1570714836,"~/templates.py"
+-'  1  0  ~/templates.py
+|4,39,1,0,1570714836,"~/templates.py"
+-'  1  0  ~/templates.py
+|4,39,1,0,1570714836,"~/templates.py"
+-'  1  0  ~/templates.py
+|4,39,1,0,1570714836,"~/templates.py"
+-'  1  0  ~/templates.py
+|4,39,1,0,1570714836,"~/templates.py"
+-'  1  0  ~/templates.py
+|4,39,1,0,1570714836,"~/templates.py"
+-'  4  12  ~/templates/extend2.html
+|4,39,4,12,1570714784,"~/templates/extend2.html"
+-'  4  12  ~/templates/extend2.html
+|4,39,4,12,1570714784,"~/templates/extend2.html"
+-'  4  12  ~/templates/extend2.html
+|4,39,4,12,1570714784,"~/templates/extend2.html"
+-'  4  12  ~/templates/extend2.html
+|4,39,4,12,1570714784,"~/templates/extend2.html"
+-'  4  12  ~/templates/extend2.html
+|4,39,4,12,1570714784,"~/templates/extend2.html"
+-'  4  12  ~/templates/extend2.html
+|4,39,4,12,1570714784,"~/templates/extend2.html"
+-'  4  12  ~/templates/extend2.html
+|4,39,4,12,1570714784,"~/templates/extend2.html"
+-'  4  12  ~/templates/extend2.html
+|4,39,4,12,1570714784,"~/templates/extend2.html"
+-'  1  0  ~/templates/extend2.html
+|4,39,1,0,1570714725,"~/templates/extend2.html"
+-'  1  0  ~/templates/extend2.html
+|4,39,1,0,1570714725,"~/templates/extend2.html"
+-'  1  0  ~/templates/extend2.html
+|4,39,1,0,1570714725,"~/templates/extend2.html"
+-'  1  0  ~/templates/extend2.html
+|4,39,1,0,1570714725,"~/templates/extend2.html"
+-'  1  0  ~/templates/extend2.html
+|4,39,1,0,1570714725,"~/templates/extend2.html"
+-'  1  0  ~/templates/extend2.html
+|4,39,1,0,1570714725,"~/templates/extend2.html"
+-'  1  0  ~/templates/extend2.html
+|4,39,1,0,1570714725,"~/templates/extend2.html"
+-'  1  0  ~/templates/extend2.html
+|4,39,1,0,1570714725,"~/templates/extend2.html"
+-'  4  12  ~/templates/extend.html
+|4,39,4,12,1570714713,"~/templates/extend.html"
+-'  4  12  ~/templates/extend.html
+|4,39,4,12,1570714713,"~/templates/extend.html"
+-'  4  12  ~/templates/extend.html
+|4,39,4,12,1570714713,"~/templates/extend.html"
+-'  4  12  ~/templates/extend.html
+|4,39,4,12,1570714713,"~/templates/extend.html"
+-'  4  12  ~/templates/extend.html
+|4,39,4,12,1570714713,"~/templates/extend.html"
+-'  4  12  ~/templates/extend.html
+|4,39,4,12,1570714713,"~/templates/extend.html"
+-'  4  12  ~/templates/extend.html
+|4,39,4,12,1570714713,"~/templates/extend.html"
+-'  4  12  ~/templates/extend.html
+|4,39,4,12,1570714713,"~/templates/extend.html"
+-'  4  12  ~/templates/extend.html
+|4,39,4,12,1570714713,"~/templates/extend.html"
+-'  4  12  ~/templates/extend.html
+|4,39,4,12,1570714713,"~/templates/extend.html"
+-'  4  12  ~/templates/extend.html
+|4,39,4,12,1570714713,"~/templates/extend.html"
+-'  4  12  ~/templates/extend.html
+|4,39,4,12,1570714713,"~/templates/extend.html"
+-'  4  12  ~/templates/extend.html
+|4,39,4,12,1570714713,"~/templates/extend.html"
+-'  4  12  ~/templates/extend.html
+|4,39,4,12,1570714713,"~/templates/extend.html"
+-'  4  12  ~/templates/extend.html
+|4,39,4,12,1570714713,"~/templates/extend.html"
+-'  4  12  ~/templates/extend.html
+|4,39,4,12,1570714713,"~/templates/extend.html"
+-'  4  12  ~/templates/extend.html
+|4,39,4,12,1570714713,"~/templates/extend.html"
+-'  4  12  ~/templates/extend.html
+|4,39,4,12,1570714713,"~/templates/extend.html"
+-'  4  12  ~/templates/extend.html
+|4,39,4,12,1570714713,"~/templates/extend.html"
+-'  4  12  ~/templates/extend.html
+|4,39,4,12,1570714713,"~/templates/extend.html"
+-'  4  12  ~/templates/extend.html
+|4,39,4,12,1570714713,"~/templates/extend.html"
+-'  4  12  ~/templates/extend.html
+|4,39,4,12,1570714713,"~/templates/extend.html"
+-'  4  12  ~/templates/extend.html
+|4,39,4,12,1570714713,"~/templates/extend.html"
+-'  4  12  ~/templates/extend.html
+|4,39,4,12,1570714713,"~/templates/extend.html"
+-'  4  12  ~/templates/extend.html
+|4,39,4,12,1570714713,"~/templates/extend.html"
+-'  4  12  ~/templates/extend.html
+|4,39,4,12,1570714713,"~/templates/extend.html"
+-'  4  12  ~/templates/extend.html
+|4,39,4,12,1570714713,"~/templates/extend.html"
+-'  4  12  ~/templates/extend.html
+|4,39,4,12,1570714713,"~/templates/extend.html"
+-'  4  12  ~/templates/extend.html
+|4,39,4,12,1570714713,"~/templates/extend.html"
+-'  4  12  ~/templates/extend.html
+|4,39,4,12,1570714713,"~/templates/extend.html"
+-'  4  12  ~/templates/extend.html
+|4,39,4,12,1570714713,"~/templates/extend.html"
+-'  4  12  ~/templates/extend.html
+|4,39,4,12,1570714713,"~/templates/extend.html"
+-'  1  0  ~/templates/extend.html
+|4,39,1,0,1570714643,"~/templates/extend.html"
+-'  1  0  ~/templates/extend.html
+|4,39,1,0,1570714643,"~/templates/extend.html"
+-'  1  0  ~/templates/extend.html
+|4,39,1,0,1570714643,"~/templates/extend.html"
+-'  1  0  ~/templates/extend.html
+|4,39,1,0,1570714643,"~/templates/extend.html"
+-'  1  0  ~/templates/extend.html
+|4,39,1,0,1570714643,"~/templates/extend.html"
+-'  1  0  ~/templates/extend.html
+|4,39,1,0,1570714643,"~/templates/extend.html"
+-'  1  0  ~/templates/extend.html
+|4,39,1,0,1570714643,"~/templates/extend.html"
+-'  1  0  ~/templates/extend.html
+|4,39,1,0,1570714643,"~/templates/extend.html"
+-'  1  0  ~/templates/extend.html
+|4,39,1,0,1570714643,"~/templates/extend.html"
+-'  1  0  ~/templates/extend.html
+|4,39,1,0,1570714643,"~/templates/extend.html"
+-'  1  0  ~/templates/extend.html
+|4,39,1,0,1570714643,"~/templates/extend.html"
+-'  1  0  ~/templates/extend.html
+|4,39,1,0,1570714643,"~/templates/extend.html"
+-'  1  0  ~/templates/extend.html
+|4,39,1,0,1570714643,"~/templates/extend.html"
+-'  1  0  ~/templates/extend.html
+|4,39,1,0,1570714643,"~/templates/extend.html"
+-'  1  0  ~/templates/extend.html
+|4,39,1,0,1570714643,"~/templates/extend.html"
+-'  1  0  ~/templates/extend.html
+|4,39,1,0,1570714643,"~/templates/extend.html"
+-'  1  0  ~/templates/extend.html
+|4,39,1,0,1570714643,"~/templates/extend.html"
+-'  1  0  ~/templates/extend.html
+|4,39,1,0,1570714643,"~/templates/extend.html"
+-'  1  0  ~/templates/extend.html
+|4,39,1,0,1570714643,"~/templates/extend.html"
+-'  1  0  ~/templates/extend.html
+|4,39,1,0,1570714643,"~/templates/extend.html"
+-'  1  0  ~/templates/extend.html
+|4,39,1,0,1570714643,"~/templates/extend.html"
+-'  1  0  ~/templates/extend.html
+|4,39,1,0,1570714643,"~/templates/extend.html"
+-'  1  0  ~/templates/extend.html
+|4,39,1,0,1570714643,"~/templates/extend.html"
+-'  1  0  ~/templates/extend.html
+|4,39,1,0,1570714643,"~/templates/extend.html"
+-'  1  0  ~/templates/extend.html
+|4,39,1,0,1570714643,"~/templates/extend.html"
+-'  1  0  ~/templates/extend.html
+|4,39,1,0,1570714643,"~/templates/extend.html"
+-'  1  0  ~/templates/extend.html
+|4,39,1,0,1570714643,"~/templates/extend.html"
+-'  1  0  ~/templates/extend.html
+|4,39,1,0,1570714643,"~/templates/extend.html"
+-'  1  0  ~/templates/extend.html
+|4,39,1,0,1570714643,"~/templates/extend.html"
+-'  1  0  ~/templates/extend.html
+|4,39,1,0,1570714643,"~/templates/extend.html"
+-'  1  0  ~/templates/extend.html
+|4,39,1,0,1570714643,"~/templates/extend.html"
+-'  1  0  ~/templates/extend.html
+|4,39,1,0,1570714643,"~/templates/extend.html"
+-'  10  6  ~/templates/base.html
+|4,39,10,6,1570714589,"~/templates/base.html"
+-'  10  6  ~/templates/base.html
+|4,39,10,6,1570714589,"~/templates/base.html"
 
 # History of marks within files (newest to oldest):
 
-> ~/hello.py
-	*	1570061759	0
-	"	19	9
-	^	19	10
-	.	19	10
-	+	2	11
-	+	25	44
-	+	25	0
-	+	25	41
-	+	30	28
-	+	41	49
-	+	1	39
-	+	4	21
-	+	11	28
-	+	9	12
+> ~/templates/extend2.html
+	*	1570715145	0
+	"	1	8
+	^	1	9
+	.	1	8
 	+	4	12
-	+	36	22
-	+	38	53
-	+	41	34
-	+	41	39
-	+	32	23
-	+	34	28
-	+	32	20
-	+	33	12
-	+	34	13
-	+	34	14
-	+	35	0
-	+	39	24
-	+	39	13
-	+	39	20
-	+	39	11
-	+	39	12
-	+	41	32
-	+	41	38
-	+	32	21
-	+	33	12
-	+	39	12
-	+	41	23
-	+	41	12
-	+	39	0
-	+	41	12
-	+	39	0
-	+	41	12
+	+	1	8
+
+> ~/templates.py
+	*	1570715116	0
+	"	12	12
+	^	12	13
+	.	12	12
+	+	16	25
+	+	14	42
+	+	17	37
+	+	2	8
+	+	10	33
+	+	14	33
+	+	12	12
+
+> ~/templates/extend.html
+	*	1570714712	0
+	"	4	12
+	^	4	13
+	.	4	12
+	+	4	12
+
+> ~/templates/base.html
+	*	1570714588	0
+	"	10	6
+	^	10	7
+	.	10	6
+	+	6	43
+	+	10	6
+
+> ~/templates/baes.html
+	*	1570714488	0
+	"	1	0
+	^	1	0
+
+> ~/hello.py
+	*	1570714348	0
+	"	15	49
+	^	15	50
+	.	15	49
+	+	45	41
+	+	50	28
+	+	61	49
+	+	1	39
+	+	17	21
+	+	24	28
+	+	22	12
+	+	17	12
+	+	56	22
+	+	58	53
+	+	61	34
+	+	61	39
+	+	52	23
+	+	54	28
+	+	52	20
+	+	53	12
+	+	54	13
+	+	54	14
+	+	55	0
+	+	59	24
+	+	59	13
+	+	59	20
+	+	59	11
+	+	59	12
+	+	61	32
+	+	61	38
+	+	52	21
+	+	53	12
+	+	59	12
+	+	61	23
+	+	61	12
+	+	59	0
+	+	61	12
+	+	59	0
+	+	61	12
+	+	62	0
+	+	37	15
+	+	39	16
+	+	37	30
+	+	38	21
+	+	39	22
+	+	41	11
+	+	42	24
+	+	41	8
+	+	42	27
+	+	40	16
+	+	37	23
 	+	42	0
-	+	17	15
-	+	19	16
-	+	17	30
-	+	18	21
-	+	19	22
-	+	21	11
-	+	22	24
-	+	21	8
-	+	22	27
-	+	20	16
-	+	17	23
-	+	22	0
-	+	22	4
-	+	22	24
-	+	22	4
-	+	17	12
-	+	22	4
-	+	22	3
-	+	23	17
-	+	17	12
-	+	26	0
-	+	25	21
-	+	26	4
-	+	23	17
-	+	23	20
-	+	23	28
-	+	23	17
-	+	25	18
-	+	26	4
-	+	26	0
-	+	23	17
-	+	23	0
-	+	17	25
-	+	19	11
-	+	20	27
-	+	21	9
-	+	22	3
-	+	23	0
-	+	17	12
-	+	19	9
-	+	22	25
-	+	21	9
-	+	19	10
+	+	42	4
+	+	42	24
+	+	42	4
+	+	37	12
+	+	42	4
+	+	42	3
+	+	43	17
+	+	37	12
+	+	46	0
+	+	45	21
+	+	46	4
+	+	43	17
+	+	43	20
+	+	43	28
+	+	43	17
+	+	45	18
+	+	46	4
+	+	46	0
+	+	43	17
+	+	43	0
+	+	37	25
+	+	39	11
+	+	40	27
+	+	41	9
+	+	42	3
+	+	43	0
+	+	37	12
+	+	39	9
+	+	40	27
+	+	28	40
+	+	30	21
+	+	35	22
+	+	30	43
+	+	31	14
+	+	35	32
+	+	1	63
+	+	4	27
+	+	5	37
+	+	4	10
+	+	4	38
+	+	4	20
+	+	4	21
+	+	4	54
+	+	4	18
+	+	4	0
+	+	7	21
+	+	15	55
+	+	12	17
+	+	13	0
+	+	14	0
+	+	13	10
+	+	15	49
+
+> ~/templates/loop.html
+	*	1570714214	0
+	"	9	6
+	^	9	7
+	.	9	6
+	+	9	6
+
+> ~/templates/conditional.html
+	*	1570714121	0
+	"	7	6
+	^	7	7
+	.	7	7
+	+	7	7
+
+> ~/templates/hello.html
+	*	1570713271	0
+	"	3	6
+	^	3	7
+	.	3	6
+	+	3	6
 
 > ~/battleship.py
-	*	1569875125	0
-	"	50	12
-	.	51	0
+	*	1570099494	0
+	"	11	14
+	.	11	0
 	+	1	27
 	+	1	69
 	+	1	0
@@ -408,7 +484,16 @@
 	+	1	14
 	+	1	70
 	+	1	18
-	+	51	0
+	+	55	0
+	+	1	40
+	+	2	20
+	+	5	0
+	+	11	16
+	+	11	0
+
+> ~/.ssh/id_rsa
+	*	1570097998	0
+	"	28	0
 
 > ~/hello.txt
 	*	1569451335	0
