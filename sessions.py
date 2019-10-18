@@ -1,7 +1,8 @@
 from flask import Flask, session
+import os
 
 app=Flask(__name__)
-app.secret_key='A0Zr98j/3yX R~XHH!jmN]LWX/,?RT'
+app.secret_key=os.urandom(24)
 
 @app.route('/')
 def index():
@@ -17,9 +18,9 @@ def read():
 	try:
 		if(session['name']):
 			return str(session['name'])
-		except KeyError:
-			pass
-		return "No session var set for 'name key"
+	except KeyError:
+            pass
+	return "No session var set for 'name key"
 
 @app.route('/session/remove/')
 def remove():
