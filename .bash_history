@@ -305,3 +305,98 @@ vim templates.py
 touch templates/extend2.html
 vim templates/extend2.html
 python -m flask run --host=0.0.0.0 --port 5000
+git commit
+git commit .
+git commit
+git push
+ssh-add ~/.ssh/id_rsa 
+git push
+mkdir etc
+touch etc/defaults.cfg
+vim etc/defaults.cfg
+vim hello.py
+export FLASK_ENV=development
+export FLASK_APP=hello.py
+python -m flask run --host=0.0.0.0 --port 5000
+vim hello.py
+python -m flask run --host=0.0.0.0 --port 5000
+vim hello.py
+python -m flask run --host=0.0.0.0 --port 5000
+vim hello.py
+python -m flask run --host=0.0.0.0 --port 5000
+vim hello.py
+python -m flask run --host=0.0.0.0 --port 5000
+vim hello.py
+python -m flask run --host=0.0.0.0 --port 5000
+vim hello.py
+python -m flask run --host=0.0.0.0 --port 5000
+vim hello.py
+python -m flask run --host=0.0.0.0 --port 5000
+vim hello.py
+vim etc/defaults.cfg
+vim hello.py
+python -m flask run --host=0.0.0.0 --port 5000
+vim hello.py
+vim etc/defaults.cfg
+vim hello.py
+python -m flask run --host=0.0.0.0 --port 5000
+vim hello.py
+python -m flask run --host=0.0.0.0 --port 5000
+vim hello.py
+vim etc/defaults.cfg
+vim hello.py
+python -m flask run --host=0.0.0.0 --port 5000
+vim hello.py
+python -m flask run --host=0.0.0.0 --port 5000
+vim hello.py
+python -m flask run --host=0.0.0.0 --port 5000
+vim hello.py
+python -m flask run --host=0.0.0.0 --port 5000
+vim hello.py
+python -m flask run --host=0.0.0.0 --port 5000
+vim hello.py
+python -m flask run --host=0.0.0.0 --port 5000
+vim hello.py
+vim etc/defaults.cfg
+vim hello.py
+python -m flask run --host=0.0.0.0 --port 5000
+vim hello.py
+python -m flask run --host=0.0.0.0 --port 5000
+vim hello.py
+python -m flask run --host=0.0.0.0 --port 5000
+vim hello.py
+python -m flask run --host=0.0.0.0 --port 5000
+vim etc/defaults.cfg
+export FLASK_ENV=development
+export FLASK_APP=hello.py
+python -m flask run --host=0.0.0.0 --port 5000
+vim hello.py
+python -m flask run --host=0.0.0.0 --port 5000
+vim hello.py
+python -m flask run --host=0.0.0.0 --port 5000
+vim hello.py
+python -m flask run --host=0.0.0.0 --port 5000
+vim hello.py
+python -m flask run --host=0.0.0.0 --port 5000
+vim hello.py
+python -m flask run --host=0.0.0.0 --port 5000
+vim hello.py
+python -m flask run --host=0.0.0.0 --port 5000
+vim hello.py
+vim hello.py
+python -m flask run --host=0.0.0.0 --port 5000
+export FLASK_APP=hello.py
+export FLASK_ENV=development
+python -m flask run --host=0.0.0.0 --port 5000
+vim hello.py
+rm .hello.py.swp
+vim hello.py
+python -m flask run --host=0.0.0.0 --port 5000
+vim hello.py
+python -m flask run --host=0.0.0.0 --port 5000
+vim hello.py
+python -m flask run --host=0.0.0.0 --port 5000
+vim hello.py
+python -m flask run --host=0.0.0.0 --port 5000
+vim hello.py
+python -m flask run --host=0.0.0.0 --port 5000

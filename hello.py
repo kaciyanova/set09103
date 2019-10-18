@@ -1,8 +1,32 @@
+import ConfigParser
 from flask import Flask,redirect,url_for,request,render_template
 app = Flask(__name__)
 
-if __name__=='__main__':
-    app.run(host='0.0.0.0',deubg=True)
+@app.route('/')
+def root():
+    return "<h1>Config testing</h2>"
+
+@app.route('/config/')
+def config():
+    str=[]
+    str.append("Debug: %s" % app.config['DEBUG'])
+    str.append('port:'+app.config['port'])
+    str.append('url:'+app.config['url'])
+    str.append('ip_address:'+app.config['ip_address'])
+    return '\t'.join(str)
+
+def init(app):
+    config=ConfigParser.ConfigParser()
+    try:
+        config_location="etc/defaults.cfg"
+        config.read(config_location)
+       
+        app.config['DEBUG']=config.get("config","debug")
+        app.config['ip_address']=config.get("config","ip_address")
+        app.config['port']=config.get("config","port")
+        app.config['url']=config.get("config","url")
+    except:
+        print "Couldn't read configs from: ", config_location
 
 @app.route('/hello/')
 @app.route('/hello/<name>')
@@ -22,10 +46,6 @@ def private():
 @app.route('/login')
 def login():
     return 'get usn and pass'
-
-@app.route('/')
-def root():
-    return "<h1>The default, 'root' route</h2>"
 
 @app.route("/account",methods=['GET','POST'])
 def account():
@@ -57,5 +77,10 @@ def force404():
 def page_not_found(error):
     return "Couldn't find the page you requested.",404
 
-if __name__=="__main__":
-    app.run(host='0.0.0.0',debug=True)
+if __name__ == "__main__":
+    init(app)
+    app.run(
+        host=app.config['ip_address'],
+        port=int(app.config['port']))
+
+
