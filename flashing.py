@@ -4,7 +4,7 @@ app=Flask(__name__)
 app.secret_key='secretshhhhh'
 
 @app.route('/')
-def indet():
+def index():
 	return render_template('index.html')
 
 @app.route('/login/')
