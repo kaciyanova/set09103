@@ -11,7 +11,7 @@ def root():
 @app.route('/config/')
 def config():
 	str = []
-	str.append('Debug:'+app.config['DEBUG'])
+	str.append('Debug: %s' % app.config['DEBUG'])
 	str.append('port:'+app.config['port'])
 	str.append('url:'+app.config['url'])
 	str.append('ip_address:'+app.config['ip_address'])
