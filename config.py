@@ -10,11 +10,12 @@ def root():
 
 @app.route('/config/')
 def config():
-	str = []
-	str.append('Debug: %s' % app.config['DEBUG'])
-	str.append('port:'+app.config['port'])
-	str.append('url:'+app.config['url'])
-	str.append('ip_address:'+app.config['ip_address'])
+	strg = []
+	#i think you need to stringify the calls here
+	strg.append('Debug: %s' % app.config['DEBUG'])
+	strg.append('port:'+app.config['port'])
+	strg.append('url:'+app.config['url'])
+	strg.append('ip_address:'+app.config['ip_address'])
 	return '\t'.join(str)
 
 def init(app):
@@ -30,6 +31,8 @@ def init(app):
 
 	except:
 		print "Could not read configs from: ", config_location
+
+init(app)
 
 if __name__ == '__main__':
 	init(app)
