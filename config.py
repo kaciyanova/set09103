@@ -16,7 +16,7 @@ def config():
 	strg.append('port:'+app.config['port'])
 	strg.append('url:'+app.config['url'])
 	strg.append('ip_address:'+app.config['ip_address'])
-	return '\t'.join(str)
+	return '\t'.join(strg)
 
 def init(app):
 	config = ConfigParser.ConfigParser()
